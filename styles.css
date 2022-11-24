@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    box-sizing: border-box;
+}
+body {
+    background-color: #222;
+    /* direction: rtl; */
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    /* background-color: #ddd; */
+    position: fixed;
+    bottom: 4px;
+    width: 100%;
+    /* padding: 10px 0 0 0; */
+}
+.boxes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* background-color: #aaa; */
+
+}
+::selection {
+    background-color: #32ad70;
+    background-color: #338866;
+
+}
+.message {
+    width: 100%;
+    margin: 0 0 0 3px;
+}
+.message input {
+    /* display: inline-block; */
+    border-radius: 50px;
+    position: relative;
+    width: 100%;
+    padding: 8px 14px;
+    /* background-color: #222222c0; */
+    background-color: #2f2f2f;
+    color: #ddd;
+    /* margin: 20px 0; */
+    font-size: 1.125em;
+    outline: none;
+    border: 1px solid rgb(67, 66, 66) ;
+
+}
+
+.mic {
+    /* background-color: #339966; */
+    height: inherit;
+    /* width: 50px; */
+    background-color: #32ad70;
+    color: #ddd;
+    padding:  0 .73em;
+    /* padding:  0 15px; */
+    border-radius: 100% ;
+    /* border-radius: 33px ; */
+    font-size: 1.3em;
+    text-align: center;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    user-select: none;
+
+}
+.mic:hover {
+    /* padding:  0 .9em; */
+    background-color: #32ad6f82;
+}
+.mic p {
+    margin-top: 50%;
+}
+.mic p:nth-child(2) {
+    display: none;
+
+}
+.emoji {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    color: #000;
+}
+
+.speaking {
+    position: absolute;
+    bottom: 50vh;
+    left: 20vw;
+    right: 20vw;
+
+    padding: 1.8em;
+    border-radius: 31px;
+    
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+
+    z-index: 2;
+    text-align: center;
+    font-size: 1.4em;
+    color: #dedede;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 1px 0 2px;
+    background-color: #2e2e2e;
+    /* animation */
+    animation: change infinite linear;
+    animation-delay: 0.1s;
+    animation-duration: 1.5s;
+    box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, .5);
+}
+.speaking button {
+    padding: 8px;
+    background-color: inherit;
+    color: inherit;
+    display: block;
+    border: 2px solid rgb(67, 66, 66) ;
+    margin-top: 10px;
+    border-radius: inherit;
+    outline: none;
+    cursor: pointer;
+
+}
+@keyframes change {
+    10% 
+    {
+        opacity: 0.1
+    }
+    20% 
+    {
+        opacity: 0.2 
+    }
+    30% 
+    {
+        opacity: 0.3 
+    }
+    40% 
+    {
+        opacity: 0.4
+    }
+    50% 
+    {
+        opacity: 0.5
+    }
+    60% 
+    {
+        opacity: 0.6
+    }
+    70% 
+    {
+        opacity: 0.7
+    }
+    80% 
+    {
+        opacity: 0.8
+    }
+    90% 
+    {
+        opacity: 0.9
+    }
+    100% 
+    {
+        opacity: 1
+    }
+}
+.force-display {
+    display: none !important;
+}
